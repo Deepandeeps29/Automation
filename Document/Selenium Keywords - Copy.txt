@@ -1,0 +1,94 @@
+id, name, xpath, css, class, tag, link, partial link, dom, name for radio or checkbox button
+
+
+
+Log
+Should Be Equal
+Run Keyword If
+Set Variable
+Sleep
+Fail
+Evaluate
+Length Should Be
+
+
+
+Click Button
+Click ElementWait Until Element Is Visible
+Input Text 
+Get Text
+
+
+1.Open Browser
+2. Close Browser
+3. Close All Browser
+4. Maximize Browser Windows
+5. Go To
+6. Get Location
+7. Set Windows Size
+8. Get Windows Size
+9. Switch Browser
+10. Reload Page
+
+
+
+
+1. Click Element
+2. Input Text
+3. Select From list by Label / Value
+4. Get Text
+5. Element Should Be Visible/Present
+6. Wait Until Element is visible
+7. Execute JavaScript
+8. Switch Window / Frame
+
+
+
+
+Set a Default timeout 
+Sleep
+Select From List By Label
+Select From List By Value
+Select Checkbox
+unselect Checkbox
+Select Radio Button    
+Alert Should Be Present
+Get Alert Message
+Handle Alert
+
+
+Common File Operation in Robot Framework
+1. Create File
+2. Append To file
+3. Get File 
+4. Get File Lines
+5. File Should Exist and Folder Should Exixt
+6. Remove File
+7. Modifying a File (Read, Modify, Write Back)
+8. Copy File, Move File
+9. Create Directory, Remove Directory
+
+
+
+FOR
+END
+FOR Loop with IN RANGE
+IF condition
+IF AND ELSE
+IF ELIF ELSE
+For IF ELSE IF ELSE
+
+
+
+
+
+String Method
+1. Convert To Lowercase
+2. Convert To Uppercase
+3. Get Substring
+4. Remove String
+5. Count String
+6. Splits String
+7. Strip String
+8. Replace String
+

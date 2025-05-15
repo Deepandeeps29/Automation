@@ -1,0 +1,73 @@
+1.Open And Close The Browser
+    [Documentation]    First check in application
+    Open Browser    https://demoapps.qspiders.com/    chrome
+    Maximize Browser Window
+    Wait Until Element Is Visible    css=h1[data-aos='fade-right']    15s
+
+    Sleep    2s
+    Close Browser
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+2.Scroll To Bottom
+    Open Browser    https://demoapps.qspiders.com/    chrome
+    Maximize Browser Window
+    Wait Until Page Contains Element    css=h1[data-aos='fade-right']    5s
+    Sleep    5s
+    Scroll Logic
+    Sleep    2s
+    Close Browser
+
+*** Keywords ***
+Scroll Logic
+    FOR   ${i}    IN RANGE   0    20
+        Execute Javascript    window.scrollBy(0,200)
+        Sleep    0.3s
+    END
+
+
+#Browsers scroll instantly with Execute JavaScript window.scrollTo(...).
+#A FOR loop + Sleep scrolls the page gradually, mimicking a human scroll.
+#Means: loop from 0 to 19 → total 20 scroll steps.
+#This gives you control over:
+#How far the page scrolls (more steps = deeper scroll).
+#How smooth the scroll is (smaller step size + more steps = smoother scroll).
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+3.Other Browser To Check
+    Open Browser    https://demoapps.qspiders.com/    edge
+    Maximize Browser Window
+    Wait Until Page Contains Element    css=h1[data-aos='fade-right']    10s
+    FOR   ${i}   IN RANGE    0    20
+        Execute Javascript    window.scrollBy(0,200)
+        Sleep    0.4s
+    END
+    Sleep    5s
+    Close Browser
+
+--------------------------------------------------------------------------------------------------------------------------
+
+4.CLick In Main Page To go
+    Open Browser    https://demoapps.qspiders.com/    chrome
+    Maximize Browser Window
+    Wait Until Page Contains Element    css=h1[data-aos='fade-right']    10s
+#    Wait Until Page Contains Element    xpath=//*[@id="optionsBody"]/a[1]/div/main/div[2]    10s\
+    Sleep    2s
+    Click Element    xpath=(//p[contains(@class,'text-[#000000] text-[0.75rem]')])[1]
+#    Click Element    xpath=//*[@id="optionsBody"]/a[1]/div/main/div[2]/div[2]
+    Sleep    2s
+    Close Browser
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+5.
+    
+
+
+

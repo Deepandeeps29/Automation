@@ -1,0 +1,103 @@
+CI/CD Pipeline Roadmap to Study
+🔰 1. Basics of CI/CD
+What is CI (Continuous Integration)?
+
+What is CD (Continuous Deployment/Delivery)?
+
+Benefits of using CI/CD
+
+Common CI/CD pipeline stages: build, test, deploy
+
+🧰 2. Version Control Systems (VCS)
+Learn Git basics: clone, commit, push, pull, branch, merge
+
+Platforms: GitHub, GitLab, Bitbucket
+
+Git workflows: GitFlow, trunk-based development
+
+⚙️ 3. CI/CD Tools
+Learn at least one:
+GitHub Actions (best for GitHub projects)
+
+Jenkins (most popular, highly customizable)
+
+GitLab CI/CD
+
+CircleCI / Travis CI / Azure DevOps
+
+🏗️ 4. Pipeline Fundamentals
+Understand pipeline structure: YAML or Groovy (Jenkins)
+
+Define pipeline stages: build → test → package → deploy
+
+Automate:
+
+Unit testing
+
+Code linting
+
+Build & compile
+
+Artifact storage (e.g., JAR, Docker images)
+
+🧪 5. Testing Integration
+Types of tests: Unit, Integration, E2E
+
+Tools:
+
+Python → pytest
+
+Java → JUnit
+
+JavaScript → Jest/Mocha
+
+Code quality tools: SonarQube, ESLint
+
+📦 6. Artifact Management
+Store build artifacts:
+
+DockerHub
+
+Nexus
+
+JFrog Artifactory
+
+🐳 7. Docker & Containers
+Learn Docker: images, containers, Dockerfile
+
+Use Docker in CI to build consistent environments
+
+Optional: Learn Docker Compose
+
+☁️ 8. Deployment Automation
+Deploy to:
+
+Web servers (NGINX, Apache)
+
+Cloud (AWS EC2, S3, Lambda)
+
+Kubernetes (optional)
+
+Use tools like Ansible, Terraform for Infrastructure as Code
+
+🔒 9. Security in CI/CD
+Secrets management (GitHub Secrets, HashiCorp Vault)
+
+Secure credentials and API tokens
+
+Static code analysis & vulnerability scans
+
+📈 10. Monitoring & Logging
+Tools: Prometheus, Grafana, ELK Stack
+
+Log monitoring: Ensure post-deploy health checks and error logging
+
+📚 Bonus: Practice Projects
+Build a CI/CD pipeline for a sample app:
+
+Frontend (React/Angular)
+
+Backend (Node.js, Django, or Flask)
+
+Deploy to Heroku, Netlify, or AWS
+

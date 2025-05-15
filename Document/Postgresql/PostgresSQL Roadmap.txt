@@ -1,0 +1,15 @@
+Why use sql
+data  
+Datatype
+DBMS vs RDBMS vs ORDBMS
+datatypes
+constraints
+Operators
+Expression
+statement of sql
+function
+joins
+
+
+
+

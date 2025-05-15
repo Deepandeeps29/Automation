@@ -1,0 +1,27 @@
+Sikuli Roadmap
+
+
+Phase 1
+
+	1.Understand Sikuli
+	2.Install
+Phase 2   -- Practice
+	3.First Test case
+	4.basic Commands To learn
+
+Phase 3 - Organize Your Test
+	5.Use variable and resources
+	6.Modular Test Structure
+Phase 4 --- Advance Concepts
+	7.Image Management
+	8.Loops and Conditional Execution
+	9.Integrate with Selenium + Sikuli
+Phase 5 -- Debugging and Practice
+
+	✅ Use Run Keyword And Ignore Error for fault tolerance.
+
+✅ Use Capture Screenshot for reporting.
+
+✅ Keep image file names meaningful (e.g., login_button.png, error_popup.png).
+	
+		

@@ -1,0 +1,83 @@
+*** Settings ***
+Library    SeleniumLibrary
+Library    AutoItLibrary
+Library    DatabaseLibrary
+
+*** Variables ***
+${DB_NAME}     Qspider_Demo1
+${DB_USER}     postgres
+${DB_PASSWORD}  python
+${DB_HOST}     localhost
+${DB_PORT}     5432
+${DB_MODULE}   psycopg2
+
+*** Test Cases ***
+Text Area
+    Open Browser    https://demoapps.qspiders.com/    chrome
+    Maximize Browser Window
+    Wait Until Page Contains Element    css=h1[data-aos='fade-right']    5s
+    Sleep    2s
+    Click Element    xpath=//section[@id='optionsBody']/a[1]/div[1]
+    Sleep    4s
+    Click Element    xpath=//a[contains(@class,'relative before:content-[""]')]
+    Sleep    4s
+    Wait Until Page Contains Element    xpath=//h1[normalize-space(text())='Register']    10s
+    Sleep    4s
+    Connect To Database    db_module=${DB_MODULE}    db_name=${DB_NAME}    db_user=${DB_USER}    db_password=${DB_PASSWORD}    db_host=${DB_HOST}    db_port=${DB_PORT}
+#    ${name}=    Query    select name from register
+#    ${email}=    Query    select email from register
+#    ${password}=    Query    select password from register
+
+
+
+    ${results}=    Query    SELECT name, email, password FROM register
+    ${name}=      Set Variable    ${results[0][0]}
+    ${email}=     Set Variable    ${results[0][1]}
+    ${password}=  Set Variable    ${results[0][2]}
+
+
+##
+    Input Text    //input[@placeholder='Enter your name']    ${name}
+    Sleep    4s
+    Input Text    //input[@placeholder='Enter Your Email']    ${email}
+    Sleep    4s
+    Input Text    //input[@placeholder='Enter your password']    ${password}
+    Sleep    4s
+    Click Element    xpath=//button[normalize-space(text())='Register']
+    Sleep    4s
+    Wait Until Page Contains Element    xpath=(//div[@role='status'])[2]    10s
+    Sleep    6s
+
+    Input Text    //input[@placeholder='Enter your email']    ${email}
+    Sleep    4s
+    Input Text    //input[@placeholder='Enter your password']    ${password}
+    Sleep    4s
+    Click Element    xpath=//button[normalize-space(text())='Login']
+    Sleep    4s
+    Wait Until Page Contains Element    xpath=(//div[@role='status'])[2]    10s
+    Sleep    5s
+
+
+#    ${results}=    Query    SELECT name, email, password FROM register
+#    FOR    ${row}    IN    @{results}
+#        ${i}=    Set Variable    ${row[0]}
+#        ${j}=    Set Variable    ${row[1]}
+#        ${k}=    Set Variable    ${row[2]}
+#        Input Text    //input[@placeholder='Enter your name']    ${i}
+#        Sleep    4s
+#        Input Text    //input[@placeholder='Enter Your Email']    ${j}
+#        Sleep    4s
+#        Input Text    //input[@placeholder='Enter your password']    ${k}
+#        Sleep    4s
+#        Click Element    xpath=//button[normalize-space(text())='Register']
+#        Sleep    4s
+#        Wait Until Page Contains Element    xpath=(//div[@role='status'])[2]    10s
+#        Sleep    6s
+#   END
+        
+
+
+
+
+    Close Browser
+

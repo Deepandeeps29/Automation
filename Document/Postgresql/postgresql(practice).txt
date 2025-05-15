@@ -1,0 +1,491 @@
+create table int_demo(
+id serial primary key,
+s_no smallint,
+b_no bigint,
+i_no integer
+)
+
+
+
+
+
+
+insert into int_demo(s_no,b_no,i_no) values (32000,4000000,200000)
+
+
+
+
+
+
+
+
+
+-- create table decimal_demo(
+-- price numeric(10,2),
+-- discount decimal(5,2),
+-- rate real,
+-- value DOUBLE PRECISION
+-- )
+
+insert into decimal_demo values (12345.67777, 12.5000, 3.14, 99999.99999)
+
+
+
+
+
+
+
+
+
+
+-- create table char_demo(
+-- name char(10),
+-- name1 varchar(10),
+-- add text
+-- )
+
+
+
+-- insert into char_demo values ('dd',"dd","'ff'")
+INSERT INTO char_demo VALUES ('dd','ghhh"jjj"', '''ff''');
+
+
+
+
+
+
+
+
+
+
+-- create table bool_demo(
+-- is_active boolean
+-- )
+
+
+-- insert into bool_demo values ('True')
+-- insert into bool_demo values (True)
+insert into bool_demo values (Trus))
+
+
+
+
+
+
+
+
+
+
+-- create table time_demo(
+-- d date,
+-- t time,
+-- ts timestamp,
+-- tsz timestamptz,
+-- i interval
+-- )
+
+
+-- insert into time_demo values
+-- ('2025-11-11','05:14:02','2025-11-11 14:11:03','2025-11-11 14:11:03+05:30','2 days 3 hours')
+-- (current_date,now(),'2025-11-11 14:11','2025-11-11 14:11:03','2 days 3 hours')
+
+
+select *
+from time_demo
+
+
+
+
+
+
+
+
+
+
+
+-- CREATE EXTENSION  "uuid-ossp";
+
+
+-- create table uuid_demo(
+-- u uuid default uuid_generate_v4()
+-- )
+
+
+
+-- insert into uuid_demo default values
+
+select *
+from uuid_demo
+
+
+-- drop table uuid_demo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- create table array_demo(
+-- shop text[]
+-- )
+
+
+
+insert into array_demo values (array['hi','hello','bye'])
+
+
+
+
+
+
+
+
+
+
+-- create table json_demo(
+-- data jsonb
+-- )
+
+
+insert into json_demo values ('{"color":"red","age":20}')
+
+
+
+
+
+
+
+
+-- create table check_demo(
+-- phone varchar(10) check(length(phone)=10)
+-- )
+
+
+insert into check_demo values ('1234567890')
+
+
+
+
+-- drop table check_demo
+
+
+
+
+
+
+
+
+
+
+
+-- create table default_demo(
+-- status varchar(100) default 'pending'
+-- )
+
+
+-- insert into default_demo default values
+
+
+
+select *
+from default_demo
+
+
+
+
+
+
+
+
+-- create table op_demo(
+-- id serial primary key,
+-- name varchar(20),
+-- sal decimal(10,2)
+-- )
+
+
+
+-- insert into op_demo values(102,'miler',30000),(103,'king',21000),(104,'allen',60000)
+
+-- select *
+-- from op_demo
+
+
+
+
+-- select max(sal)% 2
+-- from op_demo
+
+
+
+
+
+-- select *
+-- from op_demo
+-- where sal>=20000
+
+
+
+
+
+-- select *
+-- from op_demo
+-- where not  id=101;
+
+
+
+
+select op_demo.* ,'hello' || 'hi' as con
+from op_demo
+
+
+
+
+
+
+
+
+
+
+
+
+-- create table ll(
+-- id serial primary key
+-- )
+
+-- insert into ll values
+select *
+from emp
+
+
+
+
+
+
+
+
+select *
+from emp
+where name not like('m%')
+
+
+
+
+
+
+
+
+-- select 10+2 as sum,10-2 as subract,10*2 as multiple,10/2 as quotient,10%2 as modules
+-- select 5=5 as equal,5!=5 as not_equal,10>2 as greater_than,10<2 as less_than
+-- select true and false as and_result,true or false as or_result,not true as not_result
+-- select now() as current_times,current_time as time,current_date as date
+-- select *
+-- from emp
+-- where sal in 
+-- 	(select sal
+-- 	from emp 
+-- 	where deptno =10)
+-- SELECT *
+-- FROM emp
+-- WHERE id IN (
+--     SELECT id
+--     FROM emp
+--     WHERE deptno = 10
+-- );
+
+
+
+select 800*800+10/100 as bonus
+
+
+
+
+
+
+
+
+
+
+-- alter table emp
+-- rename to emps
+
+-- alter table emp
+-- add sal decimal
+
+-- alter table emp
+-- rename column sal to salary
+
+-- ALTER TABLE emp
+-- ALTER COLUMN name TYPE varchar(200);
+
+-- alter table emp
+-- alter column name set not null
+
+-- alter table emp
+-- drop column salary
+
+
+
+
+-- alter table emp add CONSTRAINT nn check(deptno>0)
+
+-- create table pp1(
+-- id int,
+-- deptno varchar(100)
+-- ) 
+
+-- create table pp2(
+-- deptno int
+-- )
+
+
+-- alter table pp2
+-- add constraint pk1 primary key(deptno)
+
+
+-- ALTER TABLE pp1
+-- ALTER COLUMN deptno TYPE integer USING deptno::integer;
+
+
+
+-- ALTER TABLE pp1
+-- ADD CONSTRAINT fk_deptno FOREIGN KEY (deptno) REFERENCES pp2(deptno);
+
+ 
+
+-- insert into pp2 values(20)
+
+
+
+
+-- truncate table pp1
+-- drop table pp1
+
+
+
+select *
+from pp1
+
+
+
+
+
+
+
+
+
+
+
+
+-- insert into pp2 (deptno) values(40)
+
+
+-- update pp2
+-- set deptno=100
+-- where deptno=10
+
+
+
+-- select *
+-- from pp2
+
+
+
+-- delete from pp2
+-- where deptno=100
+
+
+
+
+
+
+
+
+
+
+
+
+-- select *
+-- from emp cross join dept
+
+
+
+-- select *
+-- from emp inner join dept
+-- on emp.deptno = dept.deptno;
+
+
+SELECT *
+FROM emp full outer JOIN dept
+on emp.deptno = dept.deptno
+
+
+
+
+
+
+
+
+
+
+
+-- SELECT NOW() - date '2025-04-01';
+-- select  EXTRACT(date FROM AGE('2025-09-14', DATE '2025-01-01')) 
+-- SELECT CURRENT_DATE BETWEEN '2025-01-01' AND '2025-12-31';
+
+
+-- select substring('hello',2,3)
+-- SELECT POSITION('gre' IN 'PostgreSQL');
+-- SELECT STRPOS('Hello World', 'o'); 
+SELECT REPLACE('hello', 'h', 'H');   -- Output: 'Hello'
+
+
+
+
+
+
+
+
+select avg(deptno)
+from emp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+Github Roadmap
+
+Install Git on your local machine.
+Learn basic Git commands:
+Create a GitHub account
+Create a new GitHub repo
+Connect local repo to GitHub using:
+
+🧩 Intermediate
+Work with branches:
+Understand merge conflicts and how to resolve them
+Forking and Pull Requests (PRs)
+Use .gitignore files to exclude files
+Add README.md and LICENSE files
+
+⚙️ Advanced
+Use GitHub Issues and Projects for task management
+Use GitHub Actions (CI/CD automation)
+Learn Rebase, Stash, Cherry-pick
+Contribute to open-source projects (via PRs)
+Set up SSH keys for GitHub
+
+📘 Bonus Skills
+Learn Markdown for documentation (README.md)
+Use GitHub CLI (gh) for terminal access
+Explore GitHub Pages for hosting static sites
+Learn about Git tags and releases
+

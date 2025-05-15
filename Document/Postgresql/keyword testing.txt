@@ -1,0 +1,96 @@
+keyword testing
+scenario
+test case
+test scripts
+
+data driven testing
+behaviour testing
+
+data
+testdata
+
+data drive 
+Frame handling
+Alert box handling
+
+
+Capture Page Screenshot
+
+
+Absolute Path
+xpath=//div[0]div[1]div[2]div[3] ------ Actully target only button by give all path
+Relative path
+
+Click Element		xpath = // (Tag name) [@attribute=’value’]
+xpath=//div[@id="loading"] ----   This is also target button only target button id
+
+
+
+----------------------------------------
+Locator
+
+Browser Control
+Page Interaction
+Element Locator
+Waits & timings
+Dropdown
+Alert
+
+
+
+
+
+
+
+Task 
+Facebook account create and login
+Take the placeholder to use login
+Signup value go to database
+Take database value to login
+
+
+
+data driven testing
+behaviour testing
+
+
+xml 
+csv
+pdf
+image
+video
+audio
+logo
+
+
+
+Open a Website and Verify Title
+Search in Google
+Login Form Test
+Take Screenshot on Failure
+Upload a File
+Verify Table Data
+
+
+
+Login Functionality Test
+Form Submission Test
+Search Feature Test
+
+
+
+
+
+
+
+
+
+Important topic
+
+
+•	Control structures (IF, FOR, etc.)
+•	Logging
+•	Variables
+•	String handling
+•	Date/time
+•	Error handling

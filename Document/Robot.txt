@@ -1,0 +1,10 @@
+Notepad
+Flipkart
+
+Robot
+pdf
+Database
+Excel and connect PostgreSQL send pass/fail
+
+
+pdf image username convert into text to used to login page

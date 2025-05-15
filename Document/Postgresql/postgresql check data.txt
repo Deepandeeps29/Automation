@@ -1,0 +1,8 @@
+select current_database()
+
+
+
+show port;
+
+
+show data_directory;
