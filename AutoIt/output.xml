@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.5 on win32)" generated="2025-05-08T19:23:21.087956" rpa="false" schemaversion="5">
+<suite id="s1" name="AutoIt" source="D:\Program\AutoIt">
+<suite id="s1-s1" name="Database" source="D:\Program\AutoIt\database.robot">
+<test id="s1-s1-t1" name="connect To PostgreSQL And Run Query" line="31">
+<kw name="Connect To Database" owner="DatabaseLibrary">
+<msg time="2025-05-08T19:23:21.199609" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2025-05-08T19:23:21.199609" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2025-05-08T19:23:21.250981" level="INFO">Connect to DB using : psycopg2.connect(database='data', user='postgres', password=***, host='localhost', port=5432)</msg>
+<arg>db_module=${DB_MODULE}</arg>
+<arg>db_name=${DB_NAME}</arg>
+<arg>db_user=${DB_USER}</arg>
+<arg>db_password=${DB_PASSWORD}</arg>
+<arg>db_host=${DB_HOST}</arg>
+<arg>db_port=${DB_PORT}</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="PASS" start="2025-05-08T19:23:21.199609" elapsed="0.287377"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-05-08T19:23:21.486986" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT * FROM employee;&lt;/code&gt;</msg>
+<msg time="2025-05-08T19:23:21.514441" level="INFO">Commit the transaction</msg>
+<msg time="2025-05-08T19:23:21.514441" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;empid&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;ename&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;job&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;deptno&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;dinga&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;testing&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-05-08T19:23:21.514441" level="INFO">${result} = [(1, 'dinga', 'testing', None)]</msg>
+<var>${result}</var>
+<arg>SELECT * FROM employee;</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-05-08T19:23:21.486986" elapsed="0.027455"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-08T19:23:21.530207" elapsed="0.000000"/>
+</kw>
+<kw name="Disconnect From Database" owner="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<status status="PASS" start="2025-05-08T19:23:21.532510" elapsed="0.001218"/>
+</kw>
+<status status="PASS" start="2025-05-08T19:23:21.199609" elapsed="0.334119"/>
+</test>
+<status status="PASS" start="2025-05-08T19:23:21.162368" elapsed="0.373374"/>
+</suite>
+<status status="PASS" start="2025-05-08T19:23:21.092246" elapsed="0.443496"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="AutoIt" id="s1" pass="1" fail="0" skip="0">AutoIt</stat>
+<stat name="Database" id="s1-s1" pass="1" fail="0" skip="0">AutoIt.Database</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
